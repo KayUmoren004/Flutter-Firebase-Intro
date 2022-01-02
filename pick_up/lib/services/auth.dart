@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pick_up/models/app_user.dart';
+import 'package:pick_up/services/database.dart';
 
 class AuthService {
   //Firebase Auth Instance
@@ -48,6 +49,9 @@ class AuthService {
       UserCredential userInfo = await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
       User? user = userInfo.user;
+
+      //Create new doc with uid
+      await DatabaseService(uid: user!.uid).updateUserData('Player', 'LB', 500);
       return _userFromFirebaseUser(user);
     } catch (e) {
       print({'Err @ SignUp': e.toString()});

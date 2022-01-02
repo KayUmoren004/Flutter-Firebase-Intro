@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:pick_up/components/app_container.dart';
-import 'package:pick_up/components/auth_button.dart';
+import 'package:pick_up/components/auth/auth_button.dart';
 import 'package:pick_up/components/loading.dart';
 import 'package:pick_up/services/auth.dart';
 

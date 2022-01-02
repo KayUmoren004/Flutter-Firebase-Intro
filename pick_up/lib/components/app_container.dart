@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:pick_up/components/auth_button.dart';
-import 'package:pick_up/components/auth_input.dart';
+import 'package:pick_up/components/auth/auth_button.dart';
+import 'package:pick_up/components/auth/auth_input.dart';
 
 class AppContainer extends StatefulWidget {
   final Function(String) emailChanged;
